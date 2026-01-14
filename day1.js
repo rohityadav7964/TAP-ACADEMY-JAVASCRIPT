@@ -1,6 +1,18 @@
-let ar=[10,20,30,50];
+const Scan = require("prompt-sync")();
 
-ar.splice(1,1,60);
+let n = Number(Scan("Enter the size of array: "));
 
-console.log(ar);
+let b = new Array(n);
 
+console.log("Enter the elements of array:");
+
+for (let i = 0; i < b.length; i++) {
+    b[i] = Number(Scan());
+}
+
+let sum = 0;
+for (let i = 0; i < b.length; i++) {
+    sum = sum + b[i];
+}
+
+console.log("The sum of array elements is: " + sum);
